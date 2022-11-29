@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "rust_sandbox"
+name = "hello_world"
 version = "0.0.1"
