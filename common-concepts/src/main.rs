@@ -1,6 +1,7 @@
 const HARDCODED_CONSTANT: u32 = 100;
 
 fn main() {
+  /* Variables */
   let mut x = 5;
   println!("The value of x is: {x}");
   x = 6;
@@ -28,4 +29,21 @@ fn main() {
   // to having the value pointed to 1000.
   println!("The value of HARDCODED_CONSTANT is: {HARDCODED_CONSTANT}");
   // It was actually explained in the book, if only I finished reading before playing. :D
+
+  /* Data Types */
+  let tup: (u8, i32, f64) = (1, 100, 100.1); // Bounds all values to the tuple named tup
+  // values can be accessed with destructure, or dot (.) notation using value's index
+  let (x, y, z) = tup;
+  println!("Destructured values are {x}, {y}, {z}");
+  // println!("Dot-notation values are {tup.0} {tup.1} {tup.2}"); // this didn't work
+  // not sure why, probably this format is now allowed, maybe more info on it later in the book
+  let a = tup.0;
+  let b = tup.1;
+  let c = tup.2;
+  println!("Dot-notation values are {a} {b} {c}");
+
+  // Difference between tuples and arrays is that every element of an array must be of the same type.
+  // Arrays are size-fixed, unlike JS, vectors aren't though.
+  // Array's type annotation: [i32, 5], where i32 is the type of elements, and 5 is the size.
+  // For the same values repeated over n times: let a = [3,5] -> [3, 3, 3, 3, 3]
 }
